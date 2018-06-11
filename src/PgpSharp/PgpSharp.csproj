@@ -7,6 +7,10 @@
     <Description>Defines basic pgp operations for dotnet with a sample implementation using GnuPG command line.</Description>
     <PackageProjectUrl>https://github.com/soukoku/pgpsharp</PackageProjectUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/soukoku/pgpsharp/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageVersion>0.1.6.0</PackageVersion>
+    <Title>PgpSharp</Title>
+    <Authors>Yin-Chun Wang</Authors>
+    <IncludeSymbols>True</IncludeSymbols>
     <PackageTags>pgp openpgp gpg</PackageTags>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Sign.snk</AssemblyOriginatorKeyFile>
