@@ -39,7 +39,17 @@ namespace PgpSharp.GnuPG
         private static string TryFindGpgPath()
         {
             // try config first, otherwise search typical gpg install folder
-            var exe = ConfigurationManager.AppSettings[GnuPGExePathKey];
+            var exe = "";
+            try
+            {
+                exe = ConfigurationManager.AppSettings[GnuPGExePathKey];
+            }
+            catch (ConfigurationErrorsException e)
+            {
+                // Azure Functions doesn't support Configuration Manager and throws an exception.  We just swallow
+                // it and proceed with an empty string.
+                // https://blog.jongallant.com/2018/01/azure-function-config/
+            }
 
             if (!File.Exists(exe))
             {
